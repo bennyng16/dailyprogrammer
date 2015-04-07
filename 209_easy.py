@@ -32,7 +32,7 @@ user_objects = sorted (user_objects, key=lambda user: user.timestamp)
 
 for user in user_objects:
 	diff = user.timestamp - check_point
-	output.append (User (user.name, clock_remaining - diff))
+	output.append (User (user.name, int (clock_remaining - diff)))
 	check_point = user.timestamp
 
 for user in output:
